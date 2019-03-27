@@ -21,3 +21,28 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+test/
+target
+demo
+temp
+
+#.classpath
+#.project
+#.iml
+
+# Package Files #
+.idea/
+.settings/
+.mvn/
+bin/
+target/
+deploy.bat
+
+/pom_bak.xml
+/deploy_sing.bat
+/build/
+
+
+.scannerwork/
+sonar-scanner.properties

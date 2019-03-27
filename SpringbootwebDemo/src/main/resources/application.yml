@@ -1,0 +1,20 @@
+##########################################################
+##################  所有profile共有的配置  #################
+##########################################################
+
+# Tomcat
+server:
+    tomcat:
+        uri-encoding: UTF-8
+        max-threads: 1000
+        min-spare-threads: 30
+    port: 8070
+    servlet:
+        context-path: /
+spring:
+  messages:
+    basename: i18n/messages
+    cache-second: 3600
+    #encoding：UTF-8
+custom:
+  lang: unicom
