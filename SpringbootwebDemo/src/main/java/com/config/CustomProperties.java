@@ -1,10 +1,10 @@
 package com.config;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
-
-@Component
-@ConfigurationProperties(prefix = CustomProperties.PREFIX)
+//import org.springframework.boot.context.properties.ConfigurationProperties;
+//import org.springframework.stereotype.Component;
+//
+//@Component
+//@ConfigurationProperties(prefix = CustomProperties.PREFIX)
 public class CustomProperties {
 
     public static final String PREFIX = "custom";
