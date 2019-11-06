@@ -14,8 +14,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 //}
 
 //@ComponentScan(basePackages={"com.example.demo","com.other"})
-@SpringBootApplication
 
+@SpringBootApplication
 public class OtherApplication extends SpringBootServletInitializer {
      
     @Override

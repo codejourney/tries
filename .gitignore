@@ -44,5 +44,9 @@ deploy.bat
 /build/
 
 
+#os 
+.DS_Store
+
+#other tools
 .scannerwork/
 sonar-scanner.properties
