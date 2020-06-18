@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: dc-eureka
+server:
+  port: 10080
+eureka:
+  instance:
+    prefer-ip-address: true # 默认情况下服务名以hostname注册，这样在远程访问会产品域名解析问题。改为以ip注册
+    hostname: localhost
+  client:
+    register-with-eureka: false # 不让eureka在server端注册自己
+    fetch-registry: false # 不让eureka在server端注册自己
+    serviceUrl:
+      #${eureka.instance.hostname}:${server.port}/eurka
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+      #defaultZone: http://localhost:${server.port}/eureka
+    server:
+      enable-self-preservation: true
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      show-details: ALWAYS

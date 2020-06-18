@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -19,6 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 
+@Api
 @Controller
 @RequestMapping("/nihao")
 public class NihaoController {
@@ -33,6 +36,7 @@ public class NihaoController {
 //    @Resource
 //    private LocaleMessage localeMessage;
 
+	@ApiOperation(value="打招呼", notes="根据用户打招呼")
     @RequestMapping("/lang")
     @ResponseBody
     public String lang(){

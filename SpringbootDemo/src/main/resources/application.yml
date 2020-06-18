@@ -1,7 +1,7 @@
 spring:
   datasource:
       type: com.alibaba.druid.pool.DruidDataSource
-      url: jdbc:mysql://localhost:3306/datajiang?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+      url: jdbc:mysql://localhost:3306/datajiang2020?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
       username: unionlabs
       password: 123456
       filters: log4j,wall,mergeStat
