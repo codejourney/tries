@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: dc-eureka
+server:
+  port: 10081
+eureka:
+  client:
+    register-with-eureka: false # 不让eureka在server端注册自己
+    fetch-registry: false # 不让eureka在server端注册自己
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka # 只能写 defaultZone 不能写 default-zone
+  instance:
+    prefer-ip-address: true # 默认情况下服务名以hostname注册，这样在远程访问会产品域名解析问题。改为以ip注册
+  # 下面这个配置在开发环境可以关闭。是自我保护模式。相当于心跳微弱时是否当作服务存活。默认true，默认无论有多微弱都当作存活。生产环境应打开。
+  server:
+    enable-self-preservation: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
